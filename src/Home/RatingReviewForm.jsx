@@ -99,7 +99,8 @@ const RatingReviewForm = () => {
         setReview('');
         setStep(1);
       }
-    } catch (error) {
+    }
+     catch (error) {
       console.error("Review submission error:", error);
       toast.dismiss(loadingToast);
       

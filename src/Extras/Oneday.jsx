@@ -23,7 +23,8 @@ const Oneday = () => {
           `${process.env.REACT_APP_BASE_URL}/oneday/get`
         );
         setOnedayData(response.data);
-      } catch (error) {
+      }
+       catch (error) {
         toast.error("Failed to fetch places data!");
       } finally {
         setIsLoading(false);
@@ -62,7 +63,8 @@ const Oneday = () => {
       setOnedayData((prevData) =>
         prevData.filter((place) => place._id !== deleteModal.id)
       );
-    } catch (error) {
+    } 
+    catch (error) {
       toast.error("Failed to delete place!", { id: "deleteToast" });
     } finally {
       setDeleteModal({ isOpen: false, id: null });

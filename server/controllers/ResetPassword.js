@@ -125,6 +125,8 @@ exports.resetPassword = async (req, res) => {
 			});
 		}
 		const userDetails = await User.findOne({ token: token });
+
+		
 		console.log("UserDetails", userDetails);
 		if (!userDetails) {
 			return res.json({

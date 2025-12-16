@@ -36,7 +36,8 @@ const coursesSchema = new mongoose.Schema(
 			ref: "user",
 		},
 	],
-}, { timestamps: true }
+}, 
+{ timestamps: true }
 );
 
 // Export the Courses model

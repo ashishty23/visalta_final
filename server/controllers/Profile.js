@@ -115,12 +115,15 @@ exports.getAllUserDetails = async (req, res) => {
     const userDetails = await User.findById(id)
       .populate("additionalDetails")
       .exec()
+
     console.log(userDetails)
+
     res.status(200).json({
       success: true,
       message: "User Data fetched successfully",
       data: userDetails,
     })
+
   } catch (error) {
     return res.status(500).json({
       success: false,
@@ -189,6 +192,8 @@ exports.getEnrolledCourses = async (req, res) => {
         SubsectionLength +=
           userDetails.courses[i].courseContent[j].subSection.length
       }
+
+      
       let courseProgressCount = await CourseProgress.findOne({
         courseID: userDetails.courses[i]._id,
         userId: userId,

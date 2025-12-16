@@ -584,11 +584,11 @@ const BuyPage = () => {
         setFilteredCourses([]);
       } finally {
         setIsLoading(false);
-      }
+      
     };
 
     fetchCourses();
-  }, []);
+  }}, [])
 
   const handleSearch = (e) => {
     const term = e.target.value.toLowerCase();

@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 
-const contactSchema = new mongoose.Schema({
+const contactSchema = new mongoose.Schema(
+  {
   email: {
     type: String,
     required: true,
@@ -36,6 +37,7 @@ const contactSchema = new mongoose.Schema({
     match: [/^\+\d{1,4}$/, 'Country code must start with a + followed by up to 4 digits.']
   }
 },
-{ timestamps: true });
+{ timestamps: true }
+);
 
 module.exports = mongoose.model('Contact', contactSchema);

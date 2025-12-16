@@ -68,22 +68,7 @@ function App() {
           
           }
         />
-        {/* <Route
-          path="forgot-password"
-          element={
-            <OpenRoute>
-              <ForgotPassword />
-            </OpenRoute>
-          }
-        /> */}
-        {/* <Route
-          path="update-password/:id"
-          element={
-            <OpenRoute>
-              <UpdatePassword />
-            </OpenRoute>
-          }
-        /> */}
+    
 
 
 <Route path="update" element={<UpdateSection/>}/>
@@ -100,7 +85,7 @@ function App() {
           path="signup"
           element={
             <OpenRoute>
-   <Signup />
+                  <Signup />
             </OpenRoute>
             
            

@@ -48,9 +48,11 @@ const AdminPanel = () => {
   useEffect(() => {
     if (activeTab === "Contacts") {
       fetchContacts();
-    } else if (activeTab === "Feedbacks") {
+    } 
+    else if (activeTab === "Feedbacks") {
       fetchFeedbacks();
-    } else if (activeTab === "Requests") {
+    } 
+    else if (activeTab === "Requests") {
       fetchRequests();
     }
   }, [activeTab]);

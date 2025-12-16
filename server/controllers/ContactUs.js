@@ -24,6 +24,7 @@ exports.contactUsController = async (req, res) => {
       phoneNo,
       countrycode,
     });
+    
     await contactData.save();
 
     // Send the email
